@@ -2,7 +2,8 @@ import React, {useState} from 'react';
 
 // we want to alternate between two states: on and off.
 function LightSwitchButton (props) {
-  const [light, setLight] = useState();
+  //is there a different way to write the below line?
+  const {light, setLight} = props;
   const handleClick = () => setLight(light === "on" ? "off" : "on");
   return (
     <button onClick={handleClick} className="LightSwitchButton">
