@@ -2,9 +2,9 @@ import React, {useState} from 'react';
 
 // we want to alternate between two states: on and off.
 function LightSwitchButton (props) {
-  //is there a different way to write the below
   const {light, switchLight} = props;
-  //why do we put switchLight() inside of a function instead of just = switchLight
+  //or  you could write props.switchLight below
+  //why do we put switchLight() inside of a function instead of just = switchLight. we would do it the below way if there were parameters
   const handleClick = () => switchLight()
   return (
     <button onClick={handleClick} className="LightSwitchButton">
